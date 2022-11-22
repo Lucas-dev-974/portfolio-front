@@ -1,24 +1,14 @@
-# protfolio-front
+# portfolio frontend
 
-## Project setup
-```
-npm install
-```
+## Technologie
+    - Vuejs
+    - Vuetify
+    - Vuex
+    - Vue-router
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Installation 
+    - cloner le projet
+    - ouvrez le et dans un terminal entrer les commande suivante:
+      - npm install
+      - npm run serve
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
