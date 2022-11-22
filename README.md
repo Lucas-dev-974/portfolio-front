@@ -8,7 +8,7 @@
 
 ## Installation 
     - cloner le projet
-    - ouvrez le et dans un terminal entrer les commande suivante:
+    - ouvrez le et dans un terminal entrer les commandes suivantes:
       - npm install
       - npm run serve
 
