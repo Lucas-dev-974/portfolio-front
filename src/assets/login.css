@@ -1,0 +1,10 @@
+#login-card-container{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    
+}
+
+.align-item-center{
+    align-items: center;
+}

@@ -1,0 +1,262 @@
+:root{
+    --lang-scroll-width: 400px;
+}
+
+
+html, body{
+/*    background: #1E1E1E;*/
+/*    overflow: hidden;*/
+}
+
+
+* {
+
+    scrollbar-width: thin;
+    scrollbar-color: rgb(58, 58, 58) #1E1E1E;
+}
+
+#horloge{
+    letter-spacing: 2px;
+    font-style: italic;
+    font-family: 'Nunito'
+}
+.letter-space-1{ letter-spacing: 4px; }
+.letter-space-2{ letter-spacing: 8px; }
+
+.bold{ font-weight: 600; }
+.uppered{ text-transform: uppercase; }
+
+.full-height-nav-footer{ min-height:calc(100vh - (70px + 105px)); }
+.full-height-nav{ min-height: calc(100vh - 70px); }
+.full-height{ height: 100vh; }
+.dark{ background-color: #1E1E1E;}
+
+#navbar{
+    height: 70px;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}.nav-section{
+    width: fit-content;
+    text-align: center;
+}
+#logo-link{
+    text-decoration: none;
+    font-family: 'Nunito';
+    font-size: 1.5em;
+}#logo-link > a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.flex-wrap{flex-wrap: wrap;}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex{ display: flex; }
+
+
+.title-spaced-letter-1{
+    font-family: "Nunito";
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: ;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 400px) {
+    :root{
+        --lang-scroll-width: 200px;
+    }
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* HOME PAGE */
+#presentation{
+    height: 80vh;
+    font-family: 'Nunito';
+}.pitem-name, .pitem-text{
+    width: 100%;
+    display: flex;
+}
+
+
+.pitem-name{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+
+.pitem-text > div > .titre1{
+    font-size: 22px;
+}
+
+
+@media screen and (min-width: 400px) {
+   .pitem-name{
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }.pitem-text{
+        width: 50%;
+        align-items: center;
+        font-style: italic;
+        /* transform: translateY(110px); */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .pitem-name{
+        width: 100%;
+        /* background-color: blue; */
+        align-items: flex-end;
+        justify-content: center;
+        transform: translateY(-30px);
+    }.pitem-text{
+        width: 100%;
+        /* background-color: red; */
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        text-align: center;
+
+        transform: translateY(-40px);
+    }
+
+    .pitem-text > .texte1{
+        transform: translateY(-30px);
+        font-style: italic;
+    }
+
+
+}
+
+@media screen and (max-width: 470px){
+    :root{  
+        --lang-scroll-width: 250px;
+    }
+
+    .shscroll-end{
+        transform: translateX(300px);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .pitem-name{
+        width: 100%;
+        /* background-color: blue; */
+        align-items: flex-end;
+        justify-content: center;
+        /* transform: translateY(-50px); */
+    }.pitem-text{
+        width: 100%;
+        /* background-color: red; */
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        text-align: center;
+
+        transform: translateY(-40px);
+    }
+
+    .pitem-text > .texte1{
+        transform: translateY(-30px);
+        
+    }
+}
+
+#lang-bandroll-container{
+    width: var(--lang-scroll-width);
+    height: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    transform: translateY(-70px)
+      /* added */
+}
+
+
+.scroll-item{
+    margin: 0 10px;
+    min-width: 45px;
+
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}.shadow-scroll{
+    width: 10px;
+    height: 40px;
+    position: absolute;
+    z-index: 1;
+    backdrop-filter: blur(2px);
+    background: rgba(30, 30, 30, 0.5);
+    transform: translateX(-4px);
+}.shscroll-end{
+    transform: translateX(calc(var(--lang-scroll-width) - 5px));
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-1016%)
+    }
+}
+
+.italic{ font-style: italic; }
+.nunito{ font-family: 'Nunito' }
+
+
+.logo-text-link{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+
+#footer{
+    background-color: rgb(58, 58, 58);
+    font-size: 1em;
+    font-family: 'Nunito';
+    color: white;
+    font-style: italic;
+}
+@media screen and (max-width: 390px){
+    #footer{
+        font-size: 0.7em;
+    }#footer-year{
+        font-size: 0.4em;
+}
+
+}
+
+.custom-link{
+    color: white;
+    
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+
+#scroll-down-link{
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Nunito';
+    font-style: italic;
+}
