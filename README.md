@@ -1,6 +1,6 @@
 # portfolio frontend
 
-## Technologie
+## Technologies
     - Vuejs
     - Vuetify
     - Vuex
