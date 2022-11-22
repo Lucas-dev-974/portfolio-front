@@ -14,10 +14,6 @@ export default {
             jsScroll: true,
         }
     },
-  
-    mounted(){
-        this.pages = document.querySelectorAll('.page')
-    },
 
     methods: {
         timer: function(ms){
