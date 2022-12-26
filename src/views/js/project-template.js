@@ -12,13 +12,13 @@ export default {
 
 	mounted(){
 		this.loadProject()
+		
 	},
 
 	methods: {
 		loadProject: async function(){
 			const array_pathname = window.location.pathname.split('/')
 			const project_id     = array_pathname[array_pathname.length - 1]
-
 			if(isNaN(project_id)) window.location.href = '/portfolio'
 
 			const response = await request.get('/api/project/' + project_id)
@@ -30,17 +30,15 @@ export default {
 				window.location.href = '/portfolio'
 			}
 
-			if(jsonResponse.medias.length > 0){
-				jsonResponse.medias.forEach(media => {
-					this.imgs.push(this.$store.state.backend_host + media)
-				})
-			}else
+			if(jsonResponse.medias.length > 0)
+				jsonResponse.medias.forEach(media => { this.imgs.push(media); console.log(media); })
+			
+			else
 				this.imgs.push(defaultProjectRepresentation)
 			
 
 			this.project = jsonResponse	
-
-
+			console.log(this.project);
 		},
 
 		// TODO to review
