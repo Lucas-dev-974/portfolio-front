@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/Home.vue'
 import ProjectTemplate from '../views/project-template.vue'
+import dash from '@/views/dash.vue'
 import Portfolio from '../components/Home-portfolio.vue'
 
 const routes = [
@@ -17,7 +18,7 @@ const routes = [
   {
     path: '/dash',
     name: 'dashboard',
-    component: ''
+    component: dash
   },
 
   {
