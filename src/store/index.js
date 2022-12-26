@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 import VuexPersist from 'vuex-persist'
 import request from '../request.js'
+import dashStore from './dashStore.js'
 
 var VuexLocalStorage = new VuexPersist({
   key:     'vuex',
@@ -34,38 +35,27 @@ export default createStore({
       git_icon: 'white',
       demo_icon: 'white',
       card_icon: '#1E1E1E'
-    }
+    },
+
+
+    dash: { ...dashStore.state }
   },
-
-  getters: {
-  },
-
-
+  
   mutations: {
 
-    setThemeColor: function(state, color_infos){
-      state.theme_colors[color_infos.name] = color_infos.value
-    },
+    setThemeColor: function(state, color_infos){ state.theme_colors[color_infos.name] = color_infos.value },
 
-    setDark: function(state, value){
-      state.dark = value
-    },
+    setDark: function(state, value){ state.dark = value },
 
-    setInBuildMessage: function(state, value){
-      state.in_build_message = true
-    },
+    setInBuildMessage: function(state, value){ state.in_build_message = true },
 
-    updateToken: function(state, token){
-      state.token = token
-    },
+    updateToken: function(state, token){ state.token = token },
 
-    setUser: function(state, user){
-      state.user = user
-    },
+    setUser: function(state, user){ state.user = user },
 
-    setProjects: function(state, projects){
-      state.projects = projects
-    },
+    // TODO 
+    setProjects: function(state, projects){ state.projects = projects },
+    addProject: function(state, project){ state.project = state.projects.push(project) },
 
     updateProject: function(state, project){
       state.projects.filter(_project => {
@@ -86,7 +76,7 @@ export default createStore({
     }, 
 
 
-    
+    ...dashStore.mutations,
   },
 
   actions: {
