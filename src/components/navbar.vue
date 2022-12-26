@@ -9,7 +9,7 @@
             <v-switch theme='light' hide-details v-model='$store.state.dark' @click='changeTheme' density='compact' true-icon='mdi-moon-waxing-crescent' false-icon='mdi-weather-sunny'></v-switch>
             <span id="horloge" class="px-5 d-flex align-center"></span>
             <div v-if='$store.state.user && $store.state.user.role == 1' >
-                <v-btn ligth color="secondary" elevation="7" size="x-small" v-on:click="goToDashboard" >dasboard</v-btn>
+                <v-btn class="mt-2" ligth color="secondary" elevation="7" size="x-small" v-on:click="goToDashboard" >dashboard</v-btn>
             </div>
         </div>
     </nav>
