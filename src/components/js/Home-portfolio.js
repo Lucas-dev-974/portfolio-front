@@ -13,24 +13,10 @@ export default{
 		}
 	},
 
-    watch: {
-      projects: {
-        handler: function(val, old){
-            this.projects.forEach(project => {
-                if(!project.preview_img_path){
-                    project.preview_img_path = defaultProjectRepresentation
-                }else{
-                    // project.preview_img_path = this.$store.state.backend_host + '/api/media?path=' + project.preview_img_path
-                    project.preview_img_path = this.$store.state.backend_host + project.preview_img_path
-                }
-            })
-        },
-      },
-    },
-
 	mounted(){
 		this.getProjects()
         this.getCategories()
+        
 	},
 
 	methods: {
@@ -39,15 +25,9 @@ export default{
             const response = await request.get('/api/projects' + '?page=' + this.page + '&number_items=' + max_items)
             const jsonResponse = await response.json()
 
-
             if(jsonResponse.data.length > 0){
                 this.projects = jsonResponse.data
                 this.total_page = jsonResponse.last_page
-
-
-
-
-
 
                 this.$store.commit('setProjects', jsonResponse.data)                
             }
