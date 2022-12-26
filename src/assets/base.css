@@ -1,18 +1,20 @@
 :root{
     --lang-scroll-width: 400px;
+    --darken: #121212;
 }
 
+@import './btmNavigation.css';
 
-html, body{
-/*    background: #1E1E1E;*/
-/*    overflow: hidden;*/
-}
 
 
 * {
-
     scrollbar-width: thin;
     scrollbar-color: rgb(58, 58, 58) #1E1E1E;
+}
+
+.container-95{
+    width: 95%;
+    margin: 0 auto;
 }
 
 #horloge{
@@ -65,7 +67,7 @@ html, body{
     font-family: "Nunito";
     font-style: italic;
     font-size: 1.5em;
-    font-weight: ;
+    /* font-weight: ; */
     text-transform: uppercase;
 }
 
